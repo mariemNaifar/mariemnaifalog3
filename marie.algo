@@ -1,0 +1,21 @@
+
+PROCEDURE dot-product (v1,v2: ARRAY_OF INTEGER;pr:INTEGER)
+VAR
+    pr=0;
+BEGIN
+   FOR i FROM 0 TO length(v1)-1 STEP step  DO
+       pr:=pr+v1[i]*v2[i];
+   END_FOR
+END
+ALGORITHM produit
+VAR
+    p:INTEGER;
+    v1,v2: ARRAY_OF INTEGER;
+BEGIN
+        dot_product(v1,v2,p);
+        IF (p==0) THEN
+            write('produit orthogonal')
+        ELSE
+            write('produit non orthogonal')
+        END_IF
+END
